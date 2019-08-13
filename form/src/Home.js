@@ -6,28 +6,28 @@ class Home extends Component {
         return (
             <div>
               <div>
-                <nav class="nav-wrapper indigo">
-                    <div class="container">
+                <nav className="nav-wrapper indigo">
+                    <div className="container">
 
-                        <a href="/" class="brand-logo">Home</a>
-                        <a href="#" class="sidenav-trigger" data-target="mobile-links">
-                            <i class="material-icons">menu</i>
-                        </a>
+                        <Link to="/" className="brand-logo">Home</Link>
+                        <Link to="#" className="sidenav-trigger" data-target="mobile-links">
+                            <i className="material-icons">menu</i>
+                        </Link>
 
-                        <ul class="right hide-on-med-and-down" style={{width: '50%'}}>
-                            <li><a href="/home">Home</a></li>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                            <li><a href="/login">Login</a></li>
+                        <ul className="right hide-on-med-and-down" style={{width: '50%'}}>
+                            <li><Link to="/home">Home</Link></li>
+                            <li><Link to="/about">About</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
+                            <li><Link to="/login">Login</Link></li>
                         </ul>
                     </div>
                 </nav>
               </div>
-                <ul class="sidenav" id="mobile-links" style={{ width: '50%'}}>
-                    <li><a href="/">    Home      <i class='material-icons'>home</i></a></li>
-                    <li><a href="about">About     <i class='material-icons'>account_circle</i></a></li>
-                    <li><a href="contact">Contact <i class='material-icons'>local_phone</i></a></li>
-                    <li><a href="/login">Login    <i class='material-icons'>account_box</i></a></li>
+                <ul className="sidenav" id="mobile-links" style={{ width: '50%'}}>
+                    <li><Link to="/">    Home      <i className='material-icons'>home</i></Link></li>
+                    <li><Link to="about">About     <i className='material-icons'>account_circle</i></Link></li>
+                    <li><Link to="contact">Contact <i className='material-icons'>local_phone</i></Link></li>
+                    <li><Link to="/login">Login    <i className='material-icons'>account_box</i></Link></li>
                 </ul>
               
                 
