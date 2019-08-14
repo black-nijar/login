@@ -1,43 +1,31 @@
 import React, { Component } from 'react'
+import GoogleSign from 'react-google-login'
 
 class Login extends Component {
   state = {
+    loggedIn: false,
     email: '',
-    password: ''
+    name: '',
+    picture: ''
   }
-  handleChange = (e) => {
-    this.setState({
-      [e.target.id]: e.target.value
-    })
-  }
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(this.state);
-  }
+ 
+  
+ 
   render() {
+    const responseGoogle=(e)=>{
+      console.log(e.profileObj);
+    }
+   
     return (
       <div className="container center">
 
         <div className='card-panel' style={{ margin: '3em'}}>
-
-            <form className="white" onSubmit={this.handleSubmit}>
-                  <h5 className="grey-text text-darken-3" >Login</h5>
-                  <div className="input-field">
-                      <label htmlFor="email">Email</label>
-                      <input type="email" id='email' onChange={this.handleChange} />
-                  </div>
-              
-                  <div className="input-field">
-                      <label htmlFor="password">Password</label>
-                      <input type="password" id='password' onChange={this.handleChange} />
-                  </div>
-
-                  <div className="input-field">
-                      <button className="btn blue lighten-1 z-depth-1">Login</button>
-                  </div>
-                  <button></button>
-            </form>
-
+          <span>Login with Google</span>
+          <GoogleSign
+            clientId='733700047929-3fso2o8n83f7dlqo5du9bdep8lphv6n6.apps.googleusercontent.com'
+            onSuccess={ responseGoogle  }
+            onFailure={ responseGoogle  }
+          />
         </div>
 
       </div>
