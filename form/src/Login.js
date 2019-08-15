@@ -13,7 +13,7 @@ class Login extends Component {
 
   render() {
     const responseGoogle = (e) => {
-      console.log(e.profileObj);
+      //  console.log(e.profileObj);
       this.setState({
         email: e.profileObj.email,
         name: e.profileObj.name,
